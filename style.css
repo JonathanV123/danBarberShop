@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    background-color: lightcoral;
+}
+
+#container{
+    width: 100%; 
+    height: 100vh;
+    background-color: bisque;
+
+}
+
+#imgLogo{
+    width: 155px;
+    position: relative;
+    bottom: -59px;
+}
+
+a{
+    margin: 9px;
+    padding: 5px;
+}
+
+#header{
+    width: 100%;
+    position: relative;
+    color: white;
+    background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.carousel-column  {
+    margin: auto;
+  }
