@@ -5,7 +5,6 @@ body {
 
 #container {
     width: 100%;
-    height: 100vh;
     background-color: bisque;
 }
 
@@ -51,18 +50,65 @@ a {
     flex-wrap: wrap;
 }
 
-.trailDots{
+.socialMedia {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    margin-top:20px;
+}
+
+.socialList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+}
+
+.trailDots {
     font-weight: bold;
     font-size: 25px;
 }
+
 .serviceImage {
     width: 52px;
     height: 52px;
 }
 
-.price{
+.price {
     font-size: 1.9em;
 }
-.serviceDescription{
-    font-size:1.2em;
+
+.serviceDescription {
+    font-size: 1.2em;
+}
+
+.contactImg {
+    width: 62px;
+    height: 62px;
 }
