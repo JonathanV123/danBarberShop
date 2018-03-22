@@ -1,17 +1,15 @@
 body {
     margin: 0;
-    background-color: lightcoral;
 }
 
 #container {
     width: 100%;
-    background-color: bisque;
 }
 
 #imgLogo {
-    width: 155px;
+    width: 175px;
     position: relative;
-    bottom: -59px;
+    bottom: -68px;
 }
 
 a {
@@ -19,19 +17,10 @@ a {
     padding: 5px;
 }
 
-#header {
-    width: 100%;
-    position: relative;
-    color: white;
-    background-color: white;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-align-items: center;
-    align-items: center;
+.carouselDesc {
+    padding: auto 0 auto 0;
 }
+
 
 .carousel-column {
     margin: auto;
@@ -41,8 +30,10 @@ a {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    -moz-justify-content: space-around;
     -webkit-justify-content: space-around;
     justify-content: space-around;
+    -moz-align-items: center;
     -webkit-align-items: center;
     align-items: center;
     -webkit-flex-wrap: wrap;
@@ -54,8 +45,10 @@ a {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    -moz-justify-content: space-around;
     -webkit-justify-content: space-around;
     justify-content: space-around;
+    -moz-align-items: center;
     -webkit-align-items: center;
     align-items: center;
     -webkit-flex-wrap: wrap;
@@ -63,26 +56,86 @@ a {
     flex-wrap: wrap;
 }
 
+.contentIntro {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-align-items: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -moz-box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    -webkit-box-shadow: inset 0 03 0 1000px rgba(0, 0, 10, .5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    color: white;
+    background-image: url("./images/barberBG.jpg");
+    background-size: cover;
+}
+
+.seperator {
+    -moz-box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    height: 300px;
+    color: white;
+}
+
+.content h1 {
+    margin-top: 10px;
+}
+
+.footerName {
+    text-align: center;
+}
+
+.footerSocial {
+    text-align: center;
+}
+
+#footer {
+    background-color: white;
+    -moz-box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .9);
+    -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .9);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .9);
+    color: white;
+    margin-top: 25px;
+}
+
+.footerImg {
+    width: 32px;
+    height: 32px;
+}
+
 .content {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    -moz-justify-content: center;
     -webkit-justify-content: center;
     justify-content: center;
+    -moz-align-items: center;
     -webkit-align-items: center;
     align-items: center;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     flex-direction: column;
-    margin-top:20px;
 }
 
 .socialList {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    -moz-justify-content: center;
     -webkit-justify-content: center;
     justify-content: center;
+    -moz-align-items: center;
     -webkit-align-items: center;
     align-items: center;
     -webkit-flex-direction: column;
@@ -101,14 +154,117 @@ a {
 }
 
 .price {
-    font-size: 1.9em;
+    font-size: 1.4em;
 }
 
 .serviceDescription {
     font-size: 1.2em;
 }
 
+.serviceList {
+    background-color: #f7f7f7;
+}
+
 .contactImg {
     width: 62px;
     height: 62px;
+}
+
+.hidden {
+    display: none;
+}
+
+#ownerPic{
+    width: 305px;
+    height: 420px;
+    position:relative;
+    z-index: 2;
+}
+
+.scrollDownNotification {
+    font-size: 25px;
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    z-index: 100;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+.frameContainer{
+    position: relative;
+}
+.picFrame{
+    background-color:black;
+    position: absolute;
+    width: 305px;
+    height: 420px;
+    z-index: 1;
+    left: -30px;
+    bottom: -35px;
+}
+
+.scrollDownAnimation {
+    -moz-animation: downArrowAnimation 3.5s 3;
+    -webkit-animation: downArrowAnimation 3.5s 3;
+    animation: downArrowAnimation 3.5s 3;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-moz-keyframes downArrowAnimation {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -5%);
+    }
+}
+@-webkit-keyframes downArrowAnimation {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -5%);
+    }
+}
+@keyframes downArrowAnimation {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -5%);
+    }
+}
+
+@media screen and (min-width: 460px) {
+    #header {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+    }
+    #responsiveHeader {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #header {
+        display: none;
+    }
+    #responsiveHeader {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+    }
 }
