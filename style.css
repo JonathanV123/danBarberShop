@@ -448,3 +448,32 @@ hr {
       height: 320px;
   }
 }
+
+@media screen and (max-width: 310px) {
+    .contentIntro span {
+        font-size: 3em;
+    }
+    #mapFrame{
+        width: 260px;
+    }
+    #ownerPic{
+        width: 235px;
+        height: 305px;
+    }
+  }
+
+  @media screen and (max-width: 270px) {
+    .contentIntro span {
+        font-size: 2.7em;
+    }
+    #mapFrame{
+        width: 240px;
+    }
+    #ownerPic{
+        width: 220px;
+        height: 290px;
+    }
+    h1{
+        font-size: 2.1em;
+    }
+  }
