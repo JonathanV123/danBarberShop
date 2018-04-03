@@ -79,6 +79,30 @@ body {
     flex-wrap: wrap;
 }
 
+#loadScreen {
+    width: 100%;
+    height: 100vh;
+    -moz-box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    -webkit-box-shadow: inset 0 03 0 1000px rgba(0, 0, 10, .5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 10, .5);
+    background-color:black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.invisible {
+    display: none;
+    position: absolute;
+    z-index: -100;
+}
+
 .contentIntro {
     display: -webkit-box;
     display: -webkit-flex;
@@ -359,6 +383,60 @@ hr {
     position: relative;
 }
 
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-moz-keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .scrollDownAnimation {
     -moz-animation: downArrowAnimation 2.5s 6;
     -webkit-animation: downArrowAnimation 2.5s 6;
@@ -405,16 +483,16 @@ hr {
 }
 
 @media screen and (max-width:770px) {
-   .descOwnerPic{
-       margin-left: 25px;
-   }
+    .descOwnerPic {
+        margin-left: 25px;
+    }
 }
 
 @media screen and (max-width:575px) {
-    .descOwnerPic{
+    .descOwnerPic {
         margin-left: 0px;
     }
- }
+}
 
 @media screen and (min-width: 460px) {
     #header {
@@ -438,42 +516,41 @@ hr {
     }
 }
 
-
 @media screen and (max-width: 460px) {
-  .contentIntro span {
-      font-size: 3.5em;
-  }
-  #ownerPic{
-      width: 250px;
-      height: 320px;
-  }
+    .contentIntro span {
+        font-size: 3.5em;
+    }
+    #ownerPic {
+        width: 250px;
+        height: 320px;
+    }
 }
 
 @media screen and (max-width: 310px) {
     .contentIntro span {
         font-size: 3em;
     }
-    #mapFrame{
+    #mapFrame {
         width: 260px;
     }
-    #ownerPic{
+    #ownerPic {
         width: 235px;
         height: 305px;
     }
-  }
+}
 
-  @media screen and (max-width: 270px) {
+@media screen and (max-width: 270px) {
     .contentIntro span {
         font-size: 2.7em;
     }
-    #mapFrame{
+    #mapFrame {
         width: 240px;
     }
-    #ownerPic{
+    #ownerPic {
         width: 220px;
         height: 290px;
     }
-    h1{
+    h1 {
         font-size: 2.1em;
     }
-  }
+}
